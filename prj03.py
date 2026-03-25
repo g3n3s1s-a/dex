@@ -4,8 +4,8 @@ import os
 
 target_width = 275
 target_height = 275
-input_root = '/Users/amayatucker/dex/dex/dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/asl_processed/train'
-output_folder = '/Users/amayatucker/dex/dex/dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/prj03_processed'
+input_root = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/asl_processed/train'
+output_folder = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/prj03_train'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
