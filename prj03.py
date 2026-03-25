@@ -4,8 +4,14 @@ import os
 
 target_width = 275
 target_height = 275
-input_root = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/asl_processed/train'
-output_folder = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/prj03_train'
+
+#full dataset
+#input_root = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/asl_processed/train'
+#output_folder = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_HG_36000/prj03_train'
+
+#sample dataset
+input_root = 'prj03_sample_train'
+output_folder = 'prj03_sample_preprocessed'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
