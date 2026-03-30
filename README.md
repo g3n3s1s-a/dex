@@ -86,7 +86,7 @@ This hybrid representation effectively balances global hand geometry and local f
 * Run it through data preprocessing with prj03.py
   * Comment out the path to full data set (lines 9 and 10) and use commented out sample path (lines 13 and 14)
 * Update path on segmentation.py on line 12 with directory with images to test
-* Run the images on extract_features.py 
+* Run the images on feature_extraction.py 
 * You could also try compare.py to test different segmentation methods
 
 ## Team Contributions:
