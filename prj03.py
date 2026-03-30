@@ -11,7 +11,7 @@ output_folder = 'dataset/ASL-HG American Sign Language Hand Gesture Image D/ASL_
 
 #sample dataset
 #input_root = 'prj03_sample_train'
-#output_folder = 'prj03_sample_preprocessed'
+#output_folder = 'segmentation/sample_out'
 
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
