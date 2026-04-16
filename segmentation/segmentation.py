@@ -28,15 +28,12 @@ def segment_hand_skin(image):
     lower_ycrcb = np.array([0, 133, 77], dtype=np.uint8)
     upper_ycrcb = np.array([255, 173, 127], dtype=np.uint8)
     mask_ycrcb = cv2.inRange(ycrcb, lower_ycrcb, upper_ycrcb)
-    
-    mask = cv2.bitwise_and(mask_hsv, mask_ycrcb)
+    mask = cv2.bitwise_or(mask_hsv, mask_ycrcb)
     mask = mask.astype(bool)
     
     mask = closing(mask, disk(5))
     mask = binary_fill_holes(mask)
-    mask = remove_small_objects(mask, max_size=499)
-    mask = remove_small_holes(mask, max_size=500)
-    
+    mask = remove_small_objects(mask, min_size=100)
     return mask.astype(np.uint8), image_resized
 
 
