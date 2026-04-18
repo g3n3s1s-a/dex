@@ -95,6 +95,46 @@ This hybrid representation effectively balances global hand geometry and local f
 * Amaya - preprocessing
 * Genesis - segementation and feature extraction
 
+# Project 04 Report:
+## Classification Justification:
+We selected a support vector machine (SVM) with a radial basis function (RBF) kernel because our feature space is high dimensional and contains non-linearly separable classes. Many ASL hand gestures are very similar, with the only distinguishable difference being a tuck of a finger. For example, the character m is represented by making a fist and tucking your tumb between your pinky and your index finger an the character n is represented by tucking your thumb between your index finger and your middle finger. 
+<img width="517" height="523" alt="Screenshot 2026-04-17 at 10 30 45 PM" src="https://github.com/user-attachments/assets/18a46972-0f86-4bce-8b9f-c82e33ed2263" />
+<img width="524" height="523" alt="Screenshot 2026-04-17 at 10 32 03 PM" src="https://github.com/user-attachments/assets/76bc1110-fdaa-4d90-b780-5dc152d33a00" />
+
+These similar hang gestures will produce similar masks that will be very close together in the feature space making them difficult to separate. Changing the kernel to radial basis function projects the input to higher dimensions to distinguish between non linearly separable hand gestures and improve classification. 
+
+## Validation Results:
+When we ran our validation pipeline, our resulting accuracy was 99.94%. We thought this was suspiciously high so we ran the pipeline on some images of our own and we got a validation accuracy of 10%. When we ran the pipeline on the sample of images we provided you our accuracy was 100%. We thought there was an issue with segmentation, but multiple updates did not solve the problem. There is most likely an overfitting issue somewhere, but we are unsure where. A possible issue could be that our model isn’t necessarily learning the different signs, but instead memorizing the backgrounds. 
+
+* Results of the validation pipeline are available here:  https://docs.google.com/document/d/1y8do3e7dDvVR8SrR_F1-IYwb2Ai_aprwYx_s_SJlH6Y/edit?usp=sharing
+
+## Improvements
+We believe that we need to either figure out if the issue is in segmentation or feature extraction (or maybe both). Once we can figure that out, we could look into different ways of implementing these algorithms. We can figure out where the issue is by looking at the segmentation maps and feature maps. 
+
+Another way we can try to improve our model is to perform data augmentation on our training data when we train the svm model so it isn’t learning just the background. However, we have to be careful to not change the meaning in our signs. 
+
+ 
+## Instructions for running:
+* Download validation sample images below and place in validation_pipeline folder
+  * https://drive.google.com/drive/folders/1sjwdfVyEQHp7ftuBRSvnoKHXj2UDgoa5?usp=sharing 
+* Download SVM model below and place in validation_pipeline folder
+  * https://drive.google.com/file/d/1AdlnGHOqG_RFAGPw8RNGra9ollUklk27/view?usp=drive_link 
+* Run validation_pipeline/segmentation.py 
+* Run validation_pipeline/feature_extraction.py
+* Run validation_pipeline/svm_test.py
+
+## Team Contributions:
+Gen: trained SVM
+Amaya: wrote report
+
+
+
+
+
+
+
+
+
 
 
 
