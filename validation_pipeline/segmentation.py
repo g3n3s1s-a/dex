@@ -10,8 +10,10 @@ from tqdm import tqdm
 
 # --- Folders (defined at module level) ---
 # folder where the images post resizing are
-folder = "validation/"
+#folder = "validation/"
 output_folder = "segmented_images/"
+
+folder = "val_sample/"
 
 
 def segment_hand_skin(image):

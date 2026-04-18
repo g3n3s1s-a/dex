@@ -90,7 +90,7 @@ def process_single_image(filename):
 
 if __name__ == '__main__':
     # --- Load files ---
-    all_files = sorted([f for f in os.listdir(segmented_folder) if f.endswith(".jpg")])
+    all_files = sorted([f for f in os.listdir(segmented_folder) if f.lower().endswith(".jpg")])
     total_files = len(all_files)
     
     print(f"Extracting features from {total_files:,} images...")
