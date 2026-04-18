@@ -124,8 +124,8 @@ Another way we can try to improve our model is to perform data augmentation on o
 * Run validation_pipeline/svm_test.py
 
 ## Team Contributions:
-Gen: trained SVM
-Amaya: wrote report
+* Gen: trained SVM
+* Amaya: wrote report
 
 
 
