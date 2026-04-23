@@ -25,6 +25,9 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 import seaborn as sns
 import joblib
 
+# SAM imports
+from segment_anything import sam_model_registry, SamPredictor
+
 import prj03
 from segmentation import segmentation,feature_extraction, svm_train
 def run_pipeline():
