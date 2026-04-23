@@ -12,9 +12,6 @@ from PIL import Image
 import warnings
 warnings.filterwarnings('ignore')
 
-# --- Folders ---
-segmented_folder = "skin_segmented_output/"
-features_file = "features_mask_edges.pkl"
 
 # --- Parameters ---
 ORIGINAL_SIZE = (275, 275)   # original image size
@@ -88,7 +85,7 @@ def process_single_image(filename):
         return False, None, None, f"{filename}: {str(e)}"
 
 
-if __name__ == '__main__':
+  def main(segmented_folder,features_file)
     # --- Load files ---
     all_files = sorted([f for f in os.listdir(segmented_folder) if f.endswith(".jpg")])
     total_files = len(all_files)
@@ -201,3 +198,9 @@ if __name__ == '__main__':
         plt.suptitle(f"{filename} | Label: {label}")
         plt.tight_layout()
         plt.show()
+if __name__ == '__main__':
+
+  # --- Folders ---
+  segmented_folder = "skin_segmented_output/"
+  features_file = "features_mask_edges.pkl"
+  main(segmented_folder,features_file)
